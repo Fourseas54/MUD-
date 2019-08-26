@@ -136,3 +136,15 @@ void Monster::hurt(double ATK,Player* p)
         NHP -= ATK;
 
 }
+
+void Room::setdoor(Room &place) {
+	*available[direction] = place;
+}
+
+
+void Room::setnpc(Role& character) {
+	*thisplace[num] = character;
+}
+
+
+

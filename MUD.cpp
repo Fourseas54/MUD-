@@ -1,18 +1,18 @@
 #include"MUD.h"
 
-void Weapons::show()
+void Weapons::showWeapons()
 {
     cout << "武器: " << name << " 价格: " << price << " 攻击力+" << ATK << 
     " 技能伤害+" << magicDamage << endl;
 }
 
-void Armors::show()
+void Armors::showArmors()
 {
     cout << "防具:" << name <<  " 价格: " << price << " 生命值+" << HP << 
     " 物理抗性+" << physicalExsistance << " 闪避+" << dodge << endl;
 }
 
-void Drugs::show()
+void Drugs::showDrugs()
 {
     switch(typeOfDrug)
     {
@@ -28,14 +28,14 @@ void Drugs::show()
     cout << " 价格: " << price << endl;
 }
 
-void Store::show()
+void Store::showStore()
 {
     cout << "商品有：\n";
     for(int i = 0; i < this -> getLength(); i++)
         (this->getContent(i)) -> show();
 }
 
-void Player::hurt(double ATK,double MD)
+void Player::beHurt(double ATK,double MD)
 {
     if(isdead) 
     {
